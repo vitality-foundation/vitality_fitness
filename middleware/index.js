@@ -12,7 +12,7 @@ const configureMiddleware = (app) => {
   // Body-parser middleware  
   app.use(express.json());
 
-  // Cookie Parser
+  // Cookie Parser function
   app.use(cookieParser());
 
   // MongoDB data sanitizer

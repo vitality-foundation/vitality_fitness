@@ -3,7 +3,7 @@ import PokerChip from '../icons/PokerChip';
 import { Input } from '../forms/Input';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import chipImg from '../../assets/game/gglab_green.png'
+import chipImg from '../../assets/game/multibank_green.png'
 
 
 const ChipsAmountPill = ({ chipsAmount }) => {

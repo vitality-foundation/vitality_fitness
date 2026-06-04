@@ -2,7 +2,7 @@
 
 ## Next-Generation Crypto Game Platform
 
-**Web3 Social Platform** is the next leap in blockchain gaming, brought to you by [Astra Byte ](https://multibankfx.com/) — one of the world's largest financial derivatives brokers ($18B+ daily trading volume, regulated in 20+ jurisdictions).
+**Web3 Social Platform** is the next leap in blockchain gaming, brought to you by [Astra Byte ](https://astrabytesyncs.com/) — one of the world's largest financial derivatives brokers ($18B+ daily trading volume, regulated in 20+ jurisdictions).
 
 > **Revolutionizing Web3 GameFi:**
 > Play, earn, and own your experience in a decentralized poker ecosystem. Host, join, and spectate games while earning real crypto rewards via our Play-to-Earn (P2E) model. Enjoy traditional poker mechanics fused with Web3 innovations: token staking, NFT avatars, and on-chain game logic for a fair, transparent, and rewarding experience.

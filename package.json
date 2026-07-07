@@ -2,7 +2,7 @@
     "version": "1.0.0",
     "main": "./server/server.js",
     "scripts": {
-        "dev:server": "nodemon ./server",
+        "dev:server": "node ./server",
         "start:client": "npm start --prefix client",
         "start": "concurrently \"npm run dev:server\" \"npm run start:client\""
     },

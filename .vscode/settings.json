@@ -29,6 +29,7 @@
       "path": "/bin/bash"
     }
   },
+  "task.allowAutomaticTasks": "on",
   "terminal.integrated.profiles.osx": {
     "GitHub CLI": {
       "path": "/usr/local/bin/gh"

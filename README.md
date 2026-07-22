@@ -1,9 +1,9 @@
-# MetaPlay
+# DeepWhale
 
 ## Decentralized AI-Powered Multi-Chain Gaming Platform
 
 > **Blockchain Gaming on the 0G Network**  
-> MetaPlay is a gaming platform built on the **0G Network**, using decentralized AI. It supports multiple blockchains like **Ethereum (EVM)**, **Solana**, and more. Play-to-Earn (P2E) mechanics let you earn real crypto rewards.
+> DeepWhale is a gaming platform built on the **0G Network**, using decentralized AI. It supports multiple blockchains like **Ethereum (EVM)**, **Solana**, and more. Play-to-Earn (P2E) mechanics let you earn real crypto rewards.
 
 ---
 
@@ -41,7 +41,7 @@
 
 ```bash
 git clone <git-repository-url>
-cd MetaPlay
+cd DeepWhale
 
 # Install root dependencies
 npm install

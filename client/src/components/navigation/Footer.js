@@ -58,7 +58,7 @@ const Footer = ({ className, setLang, staticPages }) => {
           })}
       </Text>
       <Text textAlign="center" fontSize="0.9rem">
-        <ColoredText>© 2020 Vintage Poker. All rights reserved.</ColoredText>
+        <ColoredText>© 2020 DeepWhale. All rights reserved.</ColoredText>
       </Text>
     </StyledFooter>
   );

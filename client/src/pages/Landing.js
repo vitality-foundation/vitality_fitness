@@ -11,7 +11,6 @@ import styled from 'styled-components';
 import useScrollToTopOnPageLoad from '../hooks/useScrollToTopOnPageLoad';
 import Markdown from 'react-remarkable';
 
-//Dashboard Landing page
 const MarketingHeadline = styled(Heading)`
   @media screen and (min-width: 1024px) {
     margin-bottom: 3rem;

@@ -79,7 +79,7 @@ const LoadingScreen = () => (
     <FrostedOverlay />
     <LoaderWrapper>
       <GlowingSpinner />
-      <LoadingText>Fetching table data now ...</LoadingText>
+      <LoadingText>Loading experience...</LoadingText>
     </LoaderWrapper>
   </StyledLoadingScreen>
 );

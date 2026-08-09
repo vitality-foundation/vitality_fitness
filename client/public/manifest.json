@@ -1,7 +1,8 @@
 {
-  "short_name": "MultiBank Poker",
-  "name": "MultiBank Poker",
-  "icons": [{
+  "short_name": "0G Rollplay",
+  "name": "0G RollPlay",
+  "icons": [
+    {
       "src": "favicon.ico",
       "sizes": "48x48",
       "type": "image/x-icon"

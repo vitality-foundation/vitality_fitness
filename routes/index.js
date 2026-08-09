@@ -3,8 +3,8 @@ const configureRoutes = (app) => {
   app.use('/api/users', require('./api/users'));
   app.use('/api/chips', require('./api/chips'));
   app.use('/', (req, res) => {
-    res.status(200).send('GGLab API Documents');
+    res.status(200).send('RollPlay API Documents');
   });
-}; 
+};
 
 module.exports = configureRoutes;  

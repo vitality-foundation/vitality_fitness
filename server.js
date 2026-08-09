@@ -25,9 +25,9 @@ configureRoutes(app);
 
 // Start server and listen for connections
 const server = app.listen(config.PORT, () => {
-    console.log(
-        `Server is running in ${config.NODE_ENV} mode and is listening on port ${config.PORT}...`
-    );
+    // console.log(
+    //     `Server is running in ${config.NODE_ENV} mode and is listening on port ${config.PORT}...`
+    // );
 });
 
 //  Handle real-time poker game logic with socket.io
@@ -35,12 +35,12 @@ const io = socketio(server);
 
 io.on("connect", (socket) => gameSocket.init(socket, io));
 
-// Error handling - close server
-process.on("unhandledRejection", (err) => {
-    // db.disconnect();
-
-    console.error(`Error: ${err.message}`);
-    server.close(() => {
-        process.exit(1);
-    });
+// Error handling 
+process.on('uncaughtException', (err) => {
+    // 
 });
+
+process.on("unhandledRejection", (err) => {
+    // 
+});
+

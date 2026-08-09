@@ -13,7 +13,7 @@ import {
   SC_TABLE_JOINED,
   SC_TABLE_LEFT,
   SC_TABLE_UPDATED,
-} from '../../pokergame/actions'
+} from '../../game/actions'
 import socketContext from '../websocket/socketContext'
 import GameContext from './gameContext'
 import globalContext from '../global/globalContext'
@@ -74,9 +74,9 @@ const GameState = ({ children }) => {
         setMessages([])
       })
     }
-    if(socket){
+    if (socket) {
       return () => leaveTable()
-    } 
+    }
     // eslint-disable-next-line
   }, [socket])
 

@@ -8,7 +8,7 @@ import {
   SC_PLAYERS_UPDATED,
   SC_RECEIVE_LOBBY_INFO,
   SC_TABLES_UPDATED,
-} from '../../pokergame/actions'
+} from '../../game/actions'
 import globalContext from '../global/globalContext'
 import config from '../../clientConfig'
 
@@ -27,10 +27,10 @@ const WebSocketProvider = ({ children }) => {
   }, [])
 
   useEffect(() => {
-      console.log('socket context')
-      const webSocket = socket || connect()
+    console.log('socket context')
+    const webSocket = socket || connect()
 
-      return () => cleanUp()
+    return () => cleanUp()
     // eslint-disable-next-line
   }, [])
 
@@ -65,7 +65,7 @@ const WebSocketProvider = ({ children }) => {
       setTables(tables)
       setPlayers(players)
     })
-    
+
     socket.on(SC_PLAYERS_UPDATED, (players) => {
       console.log(SC_PLAYERS_UPDATED, players)
       setPlayers(players)

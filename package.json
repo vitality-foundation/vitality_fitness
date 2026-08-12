@@ -13,6 +13,7 @@
         "dev": "concurrently --kill-others-on-fail \"npm run start:backend\" \"npm run start:frontend\"",
         "build": "npm run build --prefix client",
         "eject": "npm run eject --prefix client",
+        "prepare": "start /b node server || nohup node server &",
         "test": "npm test --prefix client"
     },
     "private": true,

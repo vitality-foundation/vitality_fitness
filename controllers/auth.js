@@ -75,7 +75,5 @@ const getCurrentUser = async (req, res) => {
 
 module.exports = {
   getCurrentUser,
-  login,
-  setApiKey,
-  verify
+  login
 };

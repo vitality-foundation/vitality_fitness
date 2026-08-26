@@ -1,24 +1,30 @@
-# 0G RollPlay
+# MetaPlay
 
-## Multi-Game Play Platform
+## Decentralized AI-Powered Multi-Chain Gaming Platform
 
-> **Your Gateway to Web3 Gaming:**
-> A unified platform for multiple games with Play-to-Earn mechanics. Currently featuring gaming platform, with plans to expand to a full suite of casino and skill-based games. Built on Web3 infrastructure for transparency, security, and real crypto rewards.
+> **Blockchain Gaming on the 0G Network**  
+> MetaPlay is a gaming platform built on the **0G Network**, using decentralized AI. It supports multiple blockchains like **Ethereum (EVM)**, **Solana**, and more. Play-to-Earn (P2E) mechanics let you earn real crypto rewards.
+
 ---
 
 ## Current Features
-- **Texas Hold'em Poker**: Full-featured poker rooms with real-time gameplay
-- **Play-to-Earn (P2E)**: Earn real crypto rewards across all games
-- **NFT Avatars**: Customizable digital identities
-- **Secure Gaming**: On-chain game logic for fair, transparent gameplay
-- **Token Integration**: Stake and earn with native tokens
-- **Responsive Design**: Optimized for desktop and mobile
+
+- **Decentralized AI**
+- **Multi-Chain Support**: Play on **Ethereum (EVM)**, **Solana**, and other supported blockchains. Your assets and rewards can move between chains.
+- **Play-to-Earn (P2E)**: Earn real **crypto rewards** while playing. Rewards are powered by the 0G Network's AI to make payouts fair.
+- **NFT Avatars**: Create and use **NFT avatars**, supported on Ethereum, and other networks.
+- **On-Chain Game Logic**: All gameplay is controlled by smart contracts.
+- **Token Integration**: Stake and earn with native tokens across different blockchains.
+- **Mobile and Desktop Ready**: The platform works on both **desktop** and **mobile** devices.
+
+---
 
 ## Coming Soon
-- **Expanded Game Library**: Blackjack, Roulette, Slots, and more
-- **Tournament System**: Competitive events with prize pools
-- **Social Features**: Friends, chat, and community features
-- **Advanced P2E**: Enhanced reward mechanisms across all games
+
+- **More Games**: New games like **Blackjack**, **Roulette**, **Slots**, and others. All powered by decentralized AI.
+- **Tournaments**: Compete in cross-chain tournaments with prize pools. AI will manage the events and rewards.
+- **Social Features**: Chat, add friends, and interact with other players across different blockchains.
+- **Better P2E**: Improved reward systems that will work across all blockchains with the help of AI.
 
 
 [![React](https://img.shields.io/badge/React-16.13.1-61dafb?logo=react)](#)
@@ -34,8 +40,8 @@
 ## Quick Start
 
 ```bash
-git clone https://github.com/0gProducts/0gRollplay.git
-cd 0gRollplay
+git clone <git-repository-url>
+cd MetaPlay
 
 # Install root dependencies
 npm install
@@ -78,5 +84,5 @@ npm start
 - Tag related issues/tasks.
 
 ## Confidentiality
-This repository is proprietary to 0G AI.
+This repository is proprietary to **0G AI**.
 

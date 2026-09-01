@@ -46,13 +46,18 @@ cd DeepWhale
 # Install root dependencies
 npm install
 
-# Go to the client folder and install its dependencies
-cd client
-npm install
+# Install client dependencies from the project root
+npm install --prefix client
 
 # Start
 npm start
 ```
+
+Run these commands from the project root. `npm start` launches the API and client together; `npm run build` builds the client for production. Dependency installation does not start the server.
+
+On Windows PowerShell, use `npm.cmd` in place of `npm` if execution policy blocks `npm.ps1` (for example, `npm.cmd start`). You do not need to change PowerShell's execution policy.
+
+If npm reports `UNABLE_TO_VERIFY_LEAF_SIGNATURE` on Windows, Node 24.6 or newer can use the Windows certificate trust store. In the same PowerShell session, run `$env:NODE_USE_SYSTEM_CA = '1'` before installing dependencies. Keep certificate verification enabled.
 
 ---
 

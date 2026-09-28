@@ -1,0 +1,3 @@
+dashboard layout
+dashboard components
+responsive design

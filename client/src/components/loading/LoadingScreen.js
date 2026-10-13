@@ -73,7 +73,7 @@ const LoadingScreen = () => (
       muted
       loop
       playsInline
-      src="https://d1i6zd1p5d75mw.cloudfront.net/images/s/headervideo/1/3306010965.mp4"
+      src="https://interexy.com/blocks/hero/Hero.webm"
       type="video/mp4"
     />
     <FrostedOverlay />
